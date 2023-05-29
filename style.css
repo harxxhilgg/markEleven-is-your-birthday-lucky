@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --ultralight: #FFF8EA;
+    --dark: #594545;
+    --light: #815B5B;
+    --lighter: #9E7676;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0; 
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--ultralight);
+    color: var(--dark);
+}
+
+header {
+    background: var(--dark);
+}
+
+header h1 {
+    padding: 2.5rem;
+    display: grid;
+    place-items: center;
+    color: var(--ultralight);
+}
+
+section {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background: var(--light);
+    color: var(--ultralight);
+    width: 69%;
+    margin: 3rem auto;
+    border-radius: 5px;
+}
+
+section label {
+    margin: 1rem;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+section input {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background: var(--ultralight);
+    color: var(--dark);
+    font-size: 17px;
+}
+
+::placeholder{
+    color: #413232;
+}
+
+section button {
+    padding: 0.3rem 1rem;
+    margin: 1.5rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: var(--ultralight);
+    cursor: pointer;
+}
+
+section button:hover {
+    background: #fceccc;
+    transition: 100ms;
+}
+
+section #outputBox {
+    color: var(--ultralight);
+    margin: 0 auto 2rem auto;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 900px) {
+    section {
+        width: 90%; 
+    }
+
+    section input {
+        padding: 0.3rem 0.7rem;
+        font-size: 13px;
+    }
+
+    ::placeholder {
+        color: var(--dark);
+        opacity: 80%;
+    }
+
+    section #outputBox {
+        font-size: 23px;
+        padding: 1rem;
+    }
+}
+
+/*
+    hide input tags arrows
+*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
